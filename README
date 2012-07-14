@@ -1,0 +1,12 @@
+Wikipedia Language Filter
+=========================
+
+This is a Chromium browser extension that allows you to filter the translation
+links on Wikipedia [1] pages.
+
+This is free and open source software [2] released under the MIT license [3].
+
+
+[1] http://www.wikipedia.org/
+[2] http://en.wikipedia.org/wiki/Free_and_Open_Source_Software
+[3] http://creativecommons.org/licenses/MIT/
