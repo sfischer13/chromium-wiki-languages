@@ -7,6 +7,9 @@
 'use strict';
 
 function selectOptions() {
+    if (!localStorage['selectedLanguages']) {
+        localStorage['selectedLanguages'] = JSON.stringify(getDefaultLanguages());
+    }    
     var selectedLanguages = JSON.parse(localStorage['selectedLanguages']);
     $.each($("#languages > option"), function(i, o) {
         if(o.value) { // filter empty option
