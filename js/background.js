@@ -25,25 +25,26 @@ function firstRunCheck() {
     }
     
     if (first) {
-        chrome.tabs.create({'url': 'options.html'});
+        chrome.tabs.create({'url': 'html/options.html'});
     }
 }
 
 function updateCheck() {
     if (chrome.app.getDetails().version != JSON.parse(localStorage['lastVersion'])) {
         localStorage['lastVersion'] = JSON.stringify(chrome.app.getDetails().version);
-        chrome.tabs.create({'url': 'options.html'});
-        chrome.tabs.create({'url': 'changelog.html'});
+        chrome.tabs.create({'url': 'html/options.html'});
+        chrome.tabs.create({'url': 'html/changelog.html'});
     } 
 }
 
-chrome.extension.onRequest.addListener(function(request, sender, sendResponse) {
-    if (request == 'getSelectedLanguages') {
+chrome.runtime.onMessage.addListener(function(message, sender, sendResponse) {
+    if (message == 'getSelectedLanguages') {
         sendResponse(JSON.parse(localStorage['selectedLanguages']));
     } else {
         sendResponse(undefined);
     }
 });
+
 
 firstRunCheck();
 updateCheck();

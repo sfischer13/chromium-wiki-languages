@@ -7,10 +7,11 @@
 'use strict';
 
 var imgUrl = chrome.extension.getURL("img/icon_12.png");
-var optionsUrl = chrome.extension.getURL('options.html');
-$("#p-lang ul").prepend("<li><a href='" + optionsUrl + "' target='_newtab'>Liste filtern <img src='" + imgUrl + "'/></a></li>");
+var optionsUrl = chrome.extension.getURL('html/options.html');
+$("#p-lang ul").prepend("<li><a href='" + optionsUrl + "' target='_newtab'>" + chrome.i18n.getMessage("filter_list")  + " <img src='" + imgUrl + "'/></a></li>");
 
-chrome.extension.sendRequest('getSelectedLanguages', function(selectedLanguages) {
+// hide unselected languages
+chrome.runtime.sendMessage('getSelectedLanguages', function(selectedLanguages) {
     $.each($("#p-lang a[lang]"), function(index, l) {
         if ($.inArray(l.lang, selectedLanguages) == -1) {
             $("#p-lang ul > li.interwiki-" + l.lang).attr("style", "display: none;");    

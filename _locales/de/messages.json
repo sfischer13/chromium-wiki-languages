@@ -1,6 +1,7 @@
 {
     "extension_name": {"message": "Wikipedia-Sprachen-Filter"},
     "extension_description": {"message": "Filtert die Liste verfügbarer Übersetzungen auf Wikipedia-Seiten."},
+    "filter_list": {"message": "Sprachen filtern"},
     "save_message": {"message": "<br/>Änderungen wurden gespeichert.<br/>Denken Sie daran, alle Wikipedia-Seiten <b>erneut</b> zu laden!"},
     "options_title": {"message": "Wikipedia-Sprachen-Filter - Optionen"},
     "options_about": {"message": "Über"},
@@ -23,5 +24,4 @@
     "options_contact": {"message": "Kontaktmöglichkeiten"},
     "options_mail": {"message": "Schreiben Sie eine <a href='mailto:sfischer13@ymail.com?subject=Wikipedia%20Language%20Filter' target='_blank'>E-Mail</a>."},
     "options_comment": {"message": "Schreiben Sie einen Kommentar auf der <a href='https://chrome.google.com/webstore/detail/ibgceajjjioihilfcdppneoljcaofokk' target='_blank'>Webseite</a> der Erweiterung."}
-
 }

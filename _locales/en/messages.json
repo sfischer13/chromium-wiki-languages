@@ -1,6 +1,7 @@
 {
     "extension_name": {"message": "Wikipedia Language Filter"},
     "extension_description": {"message": "Filter the list of available translations on Wikipedia pages."},
+    "filter_list": {"message": "Filter languages"},
     "save_message": {"message": "<br/>Changes were saved.<br/>Remember to <b>reload</b> your Wikipedia page!"},
     "options_title": {"message": "Wikipedia Language Filter - Options"},
     "options_about": {"message": "About"},

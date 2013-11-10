@@ -16,7 +16,7 @@ function selectOptions() {
             o.selected = $.inArray(o.value, selectedLanguages) != -1;        
         }
     });
-    $("#languages").trigger("liszt:updated");
+    $("#languages").trigger("chosen:updated");
 }
 
 function fillForm() {
@@ -63,7 +63,7 @@ function saveMessage() {
 }
 
 function load() {
-    $(".chzn-select").chosen({no_results_text: ""});
+    $(".chosen-select").chosen({no_results_text: ""});
     $("#languages").chosen().change(function() {
         localStorage['selectedLanguages'] = JSON.stringify(getSelectedOptions());
         saveMessage();
