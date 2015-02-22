@@ -1,29 +1,5 @@
-a {
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-body {
-    font-family: sans-serif;
-}
-
-emph {
-    color: red;
-}
-
-h1 {
-    font-size: 150%;
-}
-
-h2 {
-    font-size: 125%;
-}
-
-h3 {
-    font-size: 100%;
+.container {
+    width: 50%;
 }
 
 .footer {

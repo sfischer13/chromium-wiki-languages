@@ -1,52 +1,42 @@
 /* Wikipedia Language Filter
- * Copyright (c) 2012–2013 Stefan Fischer <sfischer13@ymail.com>
+ * Copyright (c) 2012–2015 Stefan Fischer <sfischer13@ymail.com>
  * Licensed under the MIT license.
  * http://www.opensource.org/licenses/mit-license.php
  */
 
-'use strict';
+function selectLanguages() {
+    'use strict';
 
-function selectOptions() {
     if (!localStorage['selectedLanguages']) {
         localStorage['selectedLanguages'] = JSON.stringify(getDefaultLanguages());
     }    
     var selectedLanguages = JSON.parse(localStorage['selectedLanguages']);
-    $.each($("#languages > option"), function(i, o) {
+    $.each($('#languages > option'), function (i, o) {
         if(o.value) { // filter empty option
-            o.selected = $.inArray(o.value, selectedLanguages) != -1;        
+            o.selected = $.inArray(o.value, selectedLanguages) !== -1;        
         }
     });
-    $("#languages").trigger("chosen:updated");
+    $('#languages').trigger('chosen:updated');
 }
 
-function fillForm() {
-    var options = $.map(languages, function(name, code) {
-        return new Option(code + ": " + name, code);            
-    });
-    $("#languages").append(options); // preserve empty option
-    selectOptions();
-}
+function selectSettings() {
+    'use strict';
 
-function selectAll() {
-    localStorage['selectedLanguages'] = JSON.stringify(getAllLanguages());
-    selectOptions();
-    saveMessage();
-}
-
-function deselectAll() {
-    localStorage['selectedLanguages'] = JSON.stringify([]);
-    selectOptions();
-    saveMessage();
-}
-
-function defaultSelection() {
-    localStorage['selectedLanguages'] = JSON.stringify(getDefaultLanguages());
-    selectOptions();
-    saveMessage();
+    if (!localStorage['mode']) {
+        localStorage['mode'] = 'mode_float';
+    }
+    $('input[type=radio][name=mode]').val([localStorage['mode']]);
+        
+    if (!localStorage['highlight']) {
+        localStorage['highlight'] = true;
+    }
+    $('input[type=checkbox][name=highlight]').prop('checked', JSON.parse(localStorage['highlight']));
 }
 
 function getSelectedOptions() {
-    return $.map($("#languages > option"), function(o, i) {
+    'use strict';
+
+    return $.map($('#languages > option'), function (o, i) {
         if (o.selected) {
             return o.value;
         } else {
@@ -56,65 +46,109 @@ function getSelectedOptions() {
 }
 
 function saveMessage() {
-    $("#save_message").html(chrome.i18n.getMessage("save_message"));
-    setTimeout(function() {
-        $("#save_message").html("");
-    }, 3000);
-}
+    'use strict';
 
-function load() {
-    $(".chosen-select").chosen({no_results_text: ""});
-    $("#languages").chosen().change(function() {
-        localStorage['selectedLanguages'] = JSON.stringify(getSelectedOptions());
-        saveMessage();
-    });
-    fillForm();
+    $('#save_message').html(chrome.i18n.getMessage('save_message'));
+    setTimeout(function () {
+        $('#save_message').html('');
+    }, 4000);
 }
 
 var acceptedLanguages = [];
 
 function getAcceptedLanguages() {
+    'use strict';
+
     return acceptedLanguages;
 }
 
-function i18n_class(cl) {
-    $("." + cl).html(chrome.i18n.getMessage(cl));
+function i18nClass(cl) {
+    'use strict';
+
+    $('.' + cl).html(chrome.i18n.getMessage(cl));
 }
 
 function i18n() {
-    i18n_class("options_title");
-    i18n_class("options_about");
-    i18n_class("options_about_text");    
-    i18n_class("options_languages");
-    i18n_class("options_languages_text");
-    i18n_class("options_deselect");            
-    i18n_class("options_default");    
-    i18n_class("options_select");
-    i18n_class("options_support");            
-    i18n_class("options_problems");    
-    i18n_class("options_feedback");
-    i18n_class("options_like");            
-    i18n_class("options_rate");    
-    i18n_class("options_help");
-    i18n_class("options_design");            
-    i18n_class("options_images");    
-    i18n_class("options_css");
-    i18n_class("options_translate");            
-    i18n_class("options_contact");    
-    i18n_class("options_mail");
-    i18n_class("options_comment");
+    'use strict';
+
+    i18nClass('options_title');
+    i18nClass('options_about');
+    i18nClass('options_about_text');
+    i18nClass('options_languages');
+    i18nClass('options_languages_text');
+    i18nClass('options_deselect');            
+    i18nClass('options_default');
+    i18nClass('options_select');
+    i18nClass('options_mode');
+    i18nClass('options_float');
+    i18nClass('options_hide');
+    i18nClass('options_nothing');
+    i18nClass('options_misc');
+    i18nClass('options_highlight');
+    i18nClass('options_support');            
+    i18nClass('options_problems');    
+    i18nClass('options_feedback');
+    i18nClass('options_like');            
+    i18nClass('options_rate');    
+    i18nClass('options_help');
+    i18nClass('options_design');            
+    i18nClass('options_images');    
+    i18nClass('options_css');
+    i18nClass('options_translate');            
+    i18nClass('options_contact');    
+    i18nClass('options_mail');
+    i18nClass('options_comment');
+}
+
+function selectAndSaveLanguages(string) {
+    'use strict';
+
+    localStorage['selectedLanguages'] = string;
+    selectLanguages();
+    saveMessage();
+}
+
+function saveSettings() {
+    'use strict';
+
+    localStorage['mode'] = $('input[type=radio][name=mode]:checked').val();
+    localStorage['highlight'] = $('input[type=checkbox][name=highlight]').prop('checked');
+    saveMessage();
 }
 
 function init() {
-    load();
-    $("#bn_deselect").click(function() {deselectAll();});  
-    $("#bn_default").click(function() {defaultSelection();});    
-    $("#bn_select").click(function() {selectAll();});  
+    'use strict';
+
+    $('.chosen-select').chosen({no_results_text: ''});
+    $('#languages').chosen().change(function () {
+        localStorage['selectedLanguages'] = JSON.stringify(getSelectedOptions());
+        saveMessage();
+    });
+
+    // language list: add options
+    var options = $.map(languages, function (name, code) {
+        return new Option(code + ': ' + name, code);
+    });
+    $('#languages').append(options); // preserve empty option
+
+    // language list: selections + triggers
+    selectLanguages();
+    $('#bn_deselect').click(function () {selectAndSaveLanguages(JSON.stringify([]));});
+    $('#bn_default').click(function () {selectAndSaveLanguages(JSON.stringify(getDefaultLanguages()));});
+    $('#bn_select').click(function () {selectAndSaveLanguages(JSON.stringify(getAllLanguages()));});
+
+    // mode: selections + triggers
+    selectSettings();
+    $('input[type=radio][name=mode]').click(function () {saveSettings();});
+    $('input[type=checkbox][name=highlight]').click(function () {saveSettings();});
+
     i18n();
 }
 
-$(document).ready(function() {
-    chrome.i18n.getAcceptLanguages(function(acceptedList) {
+$(document).ready(function () {
+    'use strict';
+
+    chrome.i18n.getAcceptLanguages(function (acceptedList) {
         acceptedLanguages = acceptedList;
         init();
     });
