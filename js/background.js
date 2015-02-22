@@ -39,9 +39,9 @@ chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
 
     if (message === 'getConfig') {
         var langs = JSON.parse(localStorage['selectedLanguages']);
-        var float = localStorage['float'];
+        var mode = localStorage['mode'];
         var highlight = JSON.parse(localStorage['highlight']);
-        sendResponse([langs, float, highlight]);
+        sendResponse([langs, mode, highlight]);
     } else {
         sendResponse(undefined);
     }

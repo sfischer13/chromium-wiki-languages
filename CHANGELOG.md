@@ -9,6 +9,10 @@
 
 ### 2.0
 
+- 2.0.2 (2015-02-22)
+    - Fixed another bug that prevented settings from taking effect.
+- 2.0.1 (2015-02-22)
+    - Fixed a bug that prevented settings from taking effect.
 - 2.0.0 (2015-02-21)
     - **Highlighting and floating.**
     - **Support for Wikimedia sister pages (Wiktionary, Wikibooks, …).**

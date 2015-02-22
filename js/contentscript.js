@@ -9,22 +9,22 @@ chrome.runtime.sendMessage('getConfig', function (config) {
     'use strict';
 
     var languages = config[0];
-    var float = config[1];
+    var mode = config[1];
     var highlight = config[2];
 
-    if (float === 'do') {
+    if (mode === 'mode_float') {
         $.each($('#p-lang a[lang]'), function (index, link) {
             if ($.inArray(link.lang, languages) === -1) {
                 $('#p-lang ul > li.interwiki-' + link.lang).appendTo($('#p-lang ul'));
             }
         });
-    } else if (float === 'dont') {
+    } else if (mode === 'mode_hide') {
         $.each($('#p-lang a[lang]'), function (index, link) {
             if ($.inArray(link.lang, languages) === -1) {
                 $('#p-lang ul > li.interwiki-' + link.lang).attr('style', 'display: none;');
             }
         });
-    } else if (float === 'nothing') {
+    } else if (mode === 'mode_nothing') {
         // nothing
     }
     
