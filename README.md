@@ -1,7 +1,6 @@
 # Wikipedia Language Filter
 
-**Wikipedia Language Filter** is a Chromium browser extension that allows you to filter the translation
-links on Wikipedia pages.
+**Wikipedia Language Filter** is a Chromium browser extension that lets you filter the list of translations on Wikipedia.
 
 * [Questions](mailto:sfischer13@ymail.com) can be asked via e-mail.
 * [Source code](http://github.com/sfischer13/chromium-wiki-languages) is tracked on GitHub.

@@ -14,14 +14,16 @@ chrome.runtime.sendMessage('getConfig', function (config) {
 
     if (mode === 'mode_float') {
         $.each($('#p-lang a[lang]'), function (index, link) {
-            if ($.inArray(link.lang, languages) === -1) {
-                $('#p-lang ul > li.interwiki-' + link.lang).appendTo($('#p-lang ul'));
+            var lang = link.lang.toLowerCase();
+            if ($.inArray(lang, languages) === -1) {
+                $('#p-lang ul > li.interwiki-' + lang).appendTo($('#p-lang ul'));
             }
         });
     } else if (mode === 'mode_hide') {
         $.each($('#p-lang a[lang]'), function (index, link) {
-            if ($.inArray(link.lang, languages) === -1) {
-                $('#p-lang ul > li.interwiki-' + link.lang).attr('style', 'display: none;');
+            var lang = link.lang.toLowerCase();
+            if ($.inArray(lang, languages) === -1) {
+                $('#p-lang ul > li.interwiki-' + lang).attr('style', 'display: none;');
             }
         });
     } else if (mode === 'mode_nothing') {
@@ -30,8 +32,9 @@ chrome.runtime.sendMessage('getConfig', function (config) {
     
     if (highlight) {
         $.each($('#p-lang a[lang]'), function (index, link) {
-            if ($.inArray(link.lang, languages) !== -1) {
-                $('#p-lang ul > li.interwiki-' + link.lang + ' > a').attr('style', 'display: inline-block; background-color: #7090C0; color: #FFFFFF; border-radius: 6px; padding: 3px;');    
+            var lang = link.lang.toLowerCase();
+            if ($.inArray(lang, languages) !== -1) {
+                $('#p-lang ul > li.interwiki-' + lang + ' > a').attr('style', 'display: inline-block; background-color: #7090C0; color: #FFFFFF; border-radius: 6px; padding: 3px;');    
             }
         });
     }

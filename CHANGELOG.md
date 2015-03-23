@@ -9,6 +9,8 @@
 
 ### 2.0
 
+- 2.0.3 (2015-03-23)
+    - Fixed a bug that broke sorting in some cases.
 - 2.0.2 (2015-02-22)
     - Fixed another bug that prevented settings from taking effect.
 - 2.0.1 (2015-02-22)
