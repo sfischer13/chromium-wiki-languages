@@ -19,15 +19,13 @@
     "options_highlight": {"message": "Highlight favorite languages."},
     "options_support": {"message": "Get involved!"},
     "options_problems": {"message": "Any problems with this extension?"},
-    "options_feedback": {"message": "Give me some <emph>feedback</emph>!"},
+    "options_feedback": {"message": "Give some feedback via <a href='mailto:sfischer13@ymail.com?subject=Wikipedia%20Language%20Filter' target='_blank'>e-mail</a>!"},
     "options_like": {"message": "Do you like this extension?"},
-    "options_rate": {"message": "Rate it with <emph>5 stars</emph> on the website!"},
+    "options_rate": {"message": "Rate it with <emph>5 stars</emph> on the <a href='https://chrome.google.com/webstore/detail/ibgceajjjioihilfcdppneoljcaofokk' target='_blank'>website</a>!"},
     "options_help": {"message": "Help out!"},
-    "options_design": {"message": "Design a better <emph>icon</emph>!"},
-    "options_images": {"message": "Make some nice <emph>promotional images</emph>!"},
-    "options_css": {"message": "Revamp the <emph>CSS design</emph> of this page!"},
-    "options_translate": {"message": "<emph>Translate</emph> this page into your language!"},
-    "options_contact": {"message": "Contact information"},
-    "options_mail": {"message": "Send me an <a href='mailto:sfischer13@ymail.com?subject=Wikipedia%20Language%20Filter' target='_blank'>e-mail</a>."},
-    "options_comment": {"message": "Write a comment on the extension&apos;s <a href='https://chrome.google.com/webstore/detail/ibgceajjjioihilfcdppneoljcaofokk' target='_blank'>website</a>."}
+    "options_code": {"message": "The source code is available on <a href='https://github.com/sfischer13/chromium-wiki-languages' target='_blank'>GitHub</a>!"},
+    "options_design": {"message": "Design a better icon!"},
+    "options_images": {"message": "Make some nice promotional images!"},
+    "options_css": {"message": "Revamp the CSS design of this page!"},
+    "options_translate": {"message": "<emph>Translate</emph> this page into your language!"}
 }

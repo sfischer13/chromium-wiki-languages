@@ -19,15 +19,13 @@
     "options_highlight": {"message": "Favoriten hervorheben."},
     "options_support": {"message": "Machen Sie mit!"},
     "options_problems": {"message": "Probleme mit der Erweiterung?"},
-    "options_feedback": {"message": "Geben Sie <emph>Rückmeldung</emph>!"},
+    "options_feedback": {"message": "Geben Sie Rückmeldung per <a href='mailto:sfischer13@ymail.com?subject=Wikipedia-Sprachen-Filter' target='_blank'>E-Mail</a>!"},
     "options_like": {"message": "Gefällt Ihnen die Erweiterung?"},
-    "options_rate": {"message": "Bewerten Sie sie mit <emph>5 Sternen</emph> auf der Webseite!"},
+    "options_rate": {"message": "Bewerten Sie sie mit <emph>5 Sternen</emph> auf der <a href='https://chrome.google.com/webstore/detail/ibgceajjjioihilfcdppneoljcaofokk' target='_blank'>Webseite</a>!"},
     "options_help": {"message": "Helfen Sie mit!"},
-    "options_design": {"message": "Gestalten Sie ein schöneres <emph>Icon</emph>!"},
-    "options_images": {"message": "Machen Sie einige schöne <emph>Werbebilder</emph>!"},
-    "options_css": {"message": "Verbessern Sie das <emph>CSS-Design</emph> dieser Seite!"},
-    "options_translate": {"message": "<emph>Übersetzen</emph> Sie diese Seite in Ihre Sprache!"},
-    "options_contact": {"message": "Kontakt"},
-    "options_mail": {"message": "Schreiben Sie eine <a href='mailto:sfischer13@ymail.com?subject=Wikipedia%20Language%20Filter' target='_blank'>E-Mail</a>."},
-    "options_comment": {"message": "Schreiben Sie einen Kommentar auf der <a href='https://chrome.google.com/webstore/detail/ibgceajjjioihilfcdppneoljcaofokk' target='_blank'>Webseite</a> der Erweiterung."}
+    "options_code": {"message": "Der Quellcode ist verfügbar auf <a href='https://github.com/sfischer13/chromium-wiki-languages' target='_blank'>GitHub</a>!"},
+    "options_design": {"message": "Gestalten Sie ein schöneres Icon!"},
+    "options_images": {"message": "Machen Sie einige schöne Werbebilder!"},
+    "options_css": {"message": "Verbessern Sie das CSS-Design dieser Seite!"},
+    "options_translate": {"message": "<emph>Übersetzen</emph> Sie diese Seite in Ihre Sprache!"}
 }

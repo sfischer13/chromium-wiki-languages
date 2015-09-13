@@ -9,6 +9,8 @@
 
 ### 2.0
 
+- 2.0.4 (2015-09-13)
+    - Source code is available on [GitHub](https://github.com/sfischer13/chromium-wiki-languages)!
 - 2.0.3 (2015-03-23)
     - Fixed a bug that broke sorting in some cases.
 - 2.0.2 (2015-02-22)
