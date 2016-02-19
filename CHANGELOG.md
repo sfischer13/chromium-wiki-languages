@@ -4,8 +4,16 @@
 
 - If you have any suggestions, write a comment!
 - If you’re happy, rate us with 5 stars!
+- If you’re a developer, write a pull request on [GitHub](https://github.com/sfischer13/chromium-wiki-languages)!
 
 ## What’s new?
+
+### 2.1
+
+- 2.1.0 (2016-02-19)
+    - Improved code quality.
+    - Updated jQuery to version 2.2.0.
+    - Updated Chosen to version 1.5.1.
 
 ### 2.0
 
