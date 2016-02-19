@@ -9,13 +9,13 @@ function firstRunCheck() {
 
     var first = false;
 
-    if (!localStorage['installDate']) {
-        localStorage['installDate'] = JSON.stringify(new Date().getTime());
+    if (!localStorage.installDate) {
+        localStorage.installDate = JSON.stringify(new Date().getTime());
         first = true;
     }
     
-    if (!localStorage['lastVersion']) {
-        localStorage['lastVersion'] = JSON.stringify(chrome.app.getDetails().version);
+    if (!localStorage.lastVersion) {
+        localStorage.lastVersion = JSON.stringify(chrome.app.getDetails().version);
         first = true;
     }
     
@@ -27,8 +27,8 @@ function firstRunCheck() {
 function updateCheck() {
     'use strict';
 
-    if (chrome.app.getDetails().version !== JSON.parse(localStorage['lastVersion'])) {
-        localStorage['lastVersion'] = JSON.stringify(chrome.app.getDetails().version);
+    if (chrome.app.getDetails().version !== JSON.parse(localStorage.lastVersion)) {
+        localStorage.lastVersion = JSON.stringify(chrome.app.getDetails().version);
         chrome.tabs.create({'url': 'html/options.html'});
         chrome.tabs.create({'url': 'html/changelog.html'});
     } 
@@ -38,9 +38,9 @@ chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
     'use strict';
 
     if (message === 'getConfig') {
-        var langs = JSON.parse(localStorage['selectedLanguages']);
-        var mode = localStorage['mode'];
-        var highlight = JSON.parse(localStorage['highlight']);
+        var langs = JSON.parse(localStorage.selectedLanguages);
+        var mode = localStorage.mode;
+        var highlight = JSON.parse(localStorage.highlight);
         sendResponse([langs, mode, highlight]);
     } else {
         sendResponse(undefined);

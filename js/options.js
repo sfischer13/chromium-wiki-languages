@@ -7,10 +7,10 @@
 function selectLanguages() {
     'use strict';
 
-    if (!localStorage['selectedLanguages']) {
-        localStorage['selectedLanguages'] = JSON.stringify(getDefaultLanguages());
+    if (!localStorage.selectedLanguages) {
+        localStorage.selectedLanguages = JSON.stringify(getDefaultLanguages());
     }    
-    var selectedLanguages = JSON.parse(localStorage['selectedLanguages']);
+    var selectedLanguages = JSON.parse(localStorage.selectedLanguages);
     $.each($('#languages > option'), function (i, o) {
         if(o.value) { // filter empty option
             o.selected = $.inArray(o.value, selectedLanguages) !== -1;        
@@ -22,15 +22,15 @@ function selectLanguages() {
 function selectSettings() {
     'use strict';
 
-    if (!localStorage['mode']) {
-        localStorage['mode'] = 'mode_float';
+    if (!localStorage.mode) {
+        localStorage.mode = 'mode_float';
     }
-    $('input[type=radio][name=mode]').val([localStorage['mode']]);
+    $('input[type=radio][name=mode]').val([localStorage.mode]);
         
-    if (!localStorage['highlight']) {
-        localStorage['highlight'] = true;
+    if (!localStorage.highlight) {
+        localStorage.highlight = true;
     }
-    $('input[type=checkbox][name=highlight]').prop('checked', JSON.parse(localStorage['highlight']));
+    $('input[type=checkbox][name=highlight]').prop('checked', JSON.parse(localStorage.highlight));
 }
 
 function getSelectedOptions() {
@@ -101,7 +101,7 @@ function i18n() {
 function selectAndSaveLanguages(string) {
     'use strict';
 
-    localStorage['selectedLanguages'] = string;
+    localStorage.selectedLanguages = string;
     selectLanguages();
     saveMessage();
 }
@@ -109,8 +109,8 @@ function selectAndSaveLanguages(string) {
 function saveSettings() {
     'use strict';
 
-    localStorage['mode'] = $('input[type=radio][name=mode]:checked').val();
-    localStorage['highlight'] = $('input[type=checkbox][name=highlight]').prop('checked');
+    localStorage.mode = $('input[type=radio][name=mode]:checked').val();
+    localStorage.highlight = $('input[type=checkbox][name=highlight]').prop('checked');
     saveMessage();
 }
 
@@ -119,7 +119,7 @@ function init() {
 
     $('.chosen-select').chosen({no_results_text: ''});
     $('#languages').chosen().change(function () {
-        localStorage['selectedLanguages'] = JSON.stringify(getSelectedOptions());
+        localStorage.selectedLanguages = JSON.stringify(getSelectedOptions());
         saveMessage();
     });
 
