@@ -29,7 +29,7 @@
                 "*://*.wiktionary.org/*"
             ],
             "js": [
-                "lib/jquery/jquery-2.2.0.min.js",
+                "lib/jquery/jquery-2.2.4.min.js",
                 "js/contentscript.js"
             ]
         }
