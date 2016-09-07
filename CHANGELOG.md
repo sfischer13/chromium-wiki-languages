@@ -10,6 +10,10 @@
 
 ### 2.1
 
+- 2.1.1 (2016-09-07)
+    - Updated jQuery to version 2.2.4.
+    - Updated Chosen to version 1.6.2.
+
 - 2.1.0 (2016-02-19)
     - Improved code quality.
     - Updated jQuery to version 2.2.0.
