@@ -1,4 +1,4 @@
-# Wikipedia Language Filter – News
+# Language Filter for Wikipedia – News
 
 ## Wanna help?
 
