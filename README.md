@@ -1,5 +1,8 @@
 # Language Filter for Wikipedia
 
+[![Chrome Web Store](https://img.shields.io/chrome-web-store/stars/ibgceajjjioihilfcdppneoljcaofokk.svg)]()
+[![Maintenance](https://img.shields.io/maintenance/yes/2017.svg)]()
+
 **Language Filter for Wikipedia** is a Chromium browser extension that lets you filter the list of translations on Wikipedia.
 
 * [Questions](mailto:sfischer13@ymail.com) can be asked via e-mail.
