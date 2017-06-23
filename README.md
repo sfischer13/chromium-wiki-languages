@@ -24,6 +24,6 @@ Other [contributors](https://github.com/sfischer13/chromium-wiki-languages/graph
 
 ## License [![License](https://img.shields.io/github/license/sfischer13/chromium-wiki-languages.svg)](LICENSE)
 
-Copyright (c) 2012–2016 Stefan Fischer  
+Copyright (c) 2012-2017 Stefan Fischer  
 The source code is available under the [MIT License](http://www.opensource.org/licenses/mit-license.php).  
 See [LICENSE](LICENSE) for further details.

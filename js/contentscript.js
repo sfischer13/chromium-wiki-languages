@@ -1,5 +1,5 @@
 /* Language Filter for Wikipedia
- * Copyright (c) 2012–2016 Stefan Fischer <sfischer13@ymail.com>
+ * Copyright (c) 2012-2017 Stefan Fischer <sfischer13@ymail.com>
  * Licensed under the MIT license.
  * http://www.opensource.org/licenses/mit-license.php
  */
