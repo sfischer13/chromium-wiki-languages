@@ -92,8 +92,6 @@ function i18n() {
     i18nClass('options_rate');    
     i18nClass('options_help');
     i18nClass('options_code');
-    i18nClass('options_design');            
-    i18nClass('options_images');    
     i18nClass('options_css');
     i18nClass('options_translate');            
 }
