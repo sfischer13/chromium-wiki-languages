@@ -18,7 +18,6 @@
 Write a bug report or send a pull request.  
 Other [contributors](https://github.com/sfischer13/chromium-wiki-languages/graphs/contributors) have done so before.
 
-* [Roadmap](TODO.md) of planned improvements
 * [Issues](https://github.com/sfischer13/chromium-wiki-languages/issues) that have been reported
 
 ## License [![License](https://img.shields.io/github/license/sfischer13/chromium-wiki-languages.svg)](LICENSE)
